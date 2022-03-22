@@ -15,7 +15,7 @@ global:
 
   quay:
     provider: quay.io
-    account: msamymos
+    account: mbelal
 
   datacenter:
     clustername: PLAINTEXT
