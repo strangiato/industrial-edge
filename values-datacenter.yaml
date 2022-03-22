@@ -19,6 +19,10 @@ site:
   - manuela-ml-workspace
 
   subscriptions:
+  - name: ocs-operator
+    namespace: openshift-storage
+    channel: stable-4.8
+  
   - name: advanced-cluster-management
     namespace: open-cluster-management
     channel: release-2.3
