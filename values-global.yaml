@@ -8,14 +8,14 @@ global:
 
   git:
     provider: github.com
-    account: MB-ID
-    username: MB-ID
-    email: eng.mohammed.belal@gmail.com
+    account: rh-emea-sa-bot
+    username: rh-emea-sa-bot
+    email: rh.emea.sa.bot@gmail.com
     dev_revision: odf
 
   quay:
     provider: quay.io
-    account: mbelal
+    account: mmurakam+rh_emea_sa_bot
 
   datacenter:
     clustername: PLAINTEXT
