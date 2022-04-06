@@ -8,14 +8,14 @@ global:
 
   git:
     provider: github.com
-    account: PLAINTEXT
-    username: PLAINTEXT
-    email: EMAIL@EXAMPLE.COM
-    dev_revision: main
+    account: MB-ID
+    username: MB-ID
+    email: eng.mohammed.belal@gmail.com
+    dev_revision: odf
 
   quay:
     provider: quay.io
-    account: PLAINTEXT
+    account: mbelal
 
   datacenter:
     clustername: PLAINTEXT
