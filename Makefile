@@ -12,13 +12,13 @@ default: show
 
 install: deploy
 ifeq ($(BOOTSTRAP),1)
-	make install-odf
+	# make install-odf
 	make secret
 	make sleep-seed
 endif
 
-install-odf:
-	ansible-playbook -e pattern_repo_dir="{{lookup('env','PWD')}}" -e helm_charts_dir="{{lookup('env','PWD')}}/charts/datacenter" ./ansible/site.yml 
+# install-odf:
+# 	ansible-playbook -e pattern_repo_dir="{{lookup('env','PWD')}}" -e helm_charts_dir="{{lookup('env','PWD')}}/charts/datacenter" ./ansible/site.yml 
 
 upgrade: upgrade-secrets
 	make -f common/Makefile upgrade
