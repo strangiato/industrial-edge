@@ -143,6 +143,13 @@ site:
     plugin:
       name: helm-with-kustomize
 
+  - name: openshift-container-storage
+    namespace: openshift-storage
+    project: datacenter
+    path: charts/datacenter/openshift-container-storage
+    plugin:
+      name: helm-with-kustomize
+
 #
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
