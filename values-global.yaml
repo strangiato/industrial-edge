@@ -8,9 +8,9 @@ global:
 
   git:
     provider: github.com
-    account: rh-emea-sa-bot
-    username: rh-emea-sa-bot
-    email: rh.emea.sa.bot@gmail.com
+    account: strangiato 
+    username: strangiato
+    email: troyer@redhat.com
     dev_revision: odf
 
   quay:
