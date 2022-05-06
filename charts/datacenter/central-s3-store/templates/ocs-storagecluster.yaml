@@ -6,8 +6,6 @@ metadata:
     uninstall.ocs.openshift.io/mode: graceful
   name: ocs-storagecluster
   namespace: openshift-storage
-  finalizers:
-    - storagecluster.ocs.openshift.io
 spec:
   arbiter: {}
   encryption:
