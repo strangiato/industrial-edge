@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: openshift-container-storage
+  namespace: openshift-gitops
+spec:
+  destination:
+    name: in-cluster
+    namespace: openshift-storage
+  project: default
+  source:
+    helm:
+      parameters:
+        - name: global.repoURL
+          value: $ARGOCD_APP_SOURCE_REPO_URL
+        - name: global.targetRevision
+          value: $ARGOCD_APP_SOURCE_TARGET_REVISION
+        - name: global.namespace
+          value: $ARGOCD_APP_NAMESPACE
+        - name: global.pattern
+          value: industrial-edge
+        - name: global.valuesDirectoryURL
+          value: 'https://github.com/strangiato/industrial-edge/raw/odf'
+      valueFiles:
+        - >-
+          https://github.com/strangiato/industrial-edge/raw/odf/values-global.yaml
+        - >-
+          https://github.com/strangiato/industrial-edge/raw/odf/values-datacenter.yaml
+    path: charts/datacenter/openshift-container-storage
+    repoURL: 'https://github.com/strangiato/industrial-edge.git'
+    targetRevision: odf
+  syncPolicy:
+    automated: {}
