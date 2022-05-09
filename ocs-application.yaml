@@ -26,7 +26,7 @@ spec:
           https://github.com/strangiato/industrial-edge/raw/odf/values-global.yaml
         - >-
           https://github.com/strangiato/industrial-edge/raw/odf/values-datacenter.yaml
-    path: charts/datacenter/openshift-container-storage
+    path: charts/global/openshift-container-storage
     repoURL: 'https://github.com/strangiato/industrial-edge.git'
     targetRevision: odf
   syncPolicy:
