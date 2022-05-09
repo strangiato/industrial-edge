@@ -12,9 +12,13 @@ default: show
 
 install: deploy
 ifeq ($(BOOTSTRAP),1)
+	make install-odf
 	make secret
 	make sleep-seed
 endif
+
+install-odf:
+	oc apply -f ocs-application.yaml
 
 upgrade: upgrade-secrets
 	make -f common/Makefile upgrade
