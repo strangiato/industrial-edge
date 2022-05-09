@@ -13,11 +13,6 @@ site:
   operatorgroupExcludes:
   - manuela-factory-ml-workspace
 
-  subscriptions:
-  - name: opendatahub-operator
-    source: community-operators
-    csv: opendatahub-operator.v1.1.0
-
   - name: seldon-operator
     namespace: manuela-stormshift-messaging
     source: community-operators
